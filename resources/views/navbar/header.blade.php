@@ -1,6 +1,4 @@
-@extends('layout.main')
-
-@section('main')
+<div class="container">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Navbar</a>
@@ -10,19 +8,22 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link {{ ($title === "Home") ? 'active' : '' }}" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link {{ ($title === "About") ? 'active' : '' }}" href="/about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link {{ ($title === "Mahasiswa") ? 'active' : '' }}" href="/mahasiswa">Mahasiswa</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+            <a class="nav-link {{ ($title === "Contact") ? 'active' : '' }}" href="/contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{ ($title === "Dosen") ? 'active' : '' }}" href="/dosen">Dosen</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-@endsection
+</div>
